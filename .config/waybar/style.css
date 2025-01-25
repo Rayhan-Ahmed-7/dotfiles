@@ -146,6 +146,14 @@ button:hover {
 	border-radius: 20;
 }
 
+#battery{
+  padding: 2 15;
+	margin: 5;
+	background-color: @bg2;
+	border: none;
+	border-radius: 20;
+}
+
 #language {
 	padding: 2 15;
 	margin: 5;

@@ -3,9 +3,9 @@
 	"height": 40,
 	"width": 1366,
 
-	"modules-left": ["custom/menu", "bluetooth","hyprland/workspaces", "hyprland/window","cpu","memory"],
+	"modules-left": ["custom/menu","hyprland/workspaces", "hyprland/window","cpu","memory"],
 	"modules-center": ["custom/cmus", "custom/weather", "custom/foot","custom/nemo"],
-	"modules-right": ["tray", "hyprland/language","battery","network", "pulseaudio", "clock", "custom/power"],
+	"modules-right": ["tray", "hyprland/language","battery","pulseaudio", "clock", "custom/power"],
 
  "cpu": {
     "format": "<span color='#f38ba8'> {usage}%</span>",
@@ -93,40 +93,35 @@
 		"format-bn": "BN",
 	},
 
-"bluetooth": {
-    "format": "{icon} {name}",
-    "format-icons": {
-        "disabled": "󰂲",
-        "disconnected": "󰂲",
-        "connected": "󰂱"
-    },
-    "on-click": "blueman-manager",
-    "tooltip": true
-},
-
 "battery": {
     "format": "{icon} {capacity}%",
-    "format-icons": {
-        "charging": "󰂄",
-        "discharging": "󰁹",
-        "full": "󰁹"
-    },
+    "format-icons": ["󰁹", "󰂆", "󰂀", "󰁾", "󰁺"],
     "tooltip": true,
     "on-click": "gnome-power-statistics",
     "update-interval": 30
 },
-"network": {
-	"format": "{ifname}",
-	"format-wifi": "{icon}",
-	"format-ethernet": "󰌘",
-	"format-disconnected": "󰌙", 
-	"tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
-	"format-linked": "󰈁 {ifname} (No IP)",
-	"tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
-	"tooltip-format-ethernet": "{ifname} 󰌘",
-	"tooltip-format-disconnected": "󰌙 Disconnected",
-	"max-length": 50,
-	"format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
+"battery": {
+        "bat" : "BAT0" ,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span color='#89b4fa'>{icon}</span> {capacity}%",
+        "format-charging": "<span color='#a6e3a1'>{icon}</span> {capacity}% ",
+        "format-warning": "<span color='#fab387'>{icon}</span> {capacity}%",
+        "format-critical": "<span color='#f38ba8'>{icon}</span> {capacity}%",
+        "format-plugged": "<span color='#a6e3a1'>{icon}</span> {capacity}% ",
+        "format-full": "<span color='#a6e3a1'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", ""],
+        "on-click": "killall -SIGUSR2 waybar",
+        "tooltip-format": "{}\nClick to reload Waybar",
+        "colors": {
+        "critical": "#f38ba8", // Red for critical state
+        "warning": "#fab387", // Orange for warning state
+        "normal": "#89b4fa",  // Blue for normal state
+        "full": "#a6e3a1"     // Green for full charge
+    }
+   
 },
     
 	"pulseaudio": {
