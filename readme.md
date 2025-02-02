@@ -19,7 +19,7 @@ To set up the environment, execute the following commands in your terminal:
 ```bash
 # Install required packages
 sudo pacman -Syu
-sudo pacman -S base-devel ttf-firacode-nerd jq waybar cmus libmad networkmanager sddm network-manager-applet blueman bluez bluez-utils
+sudo pacman -S base-devel ttf-firacode-nerd jq waybar cmus libmad networkmanager sddm network-manager-applet blueman bluez celluloid bluez-utils
 yay -S cava catppuccin-cursors-mocha catppuccin-gtk-theme catppuccin-cursors catppuccin-icons tela-circle-icon-theme
 
 # Enable and start NetworkManager service
@@ -33,6 +33,10 @@ sudo systemctl start bluetooth.service
 # Enable and start SDDM service
 sudo systemctl enable sddm.service
 sudo systemctl start sddm.service
+
+# mount parttion
+sudo pacman -S ntfs-3g
+UUID=342AFB742AFB318A /home/rayhan/mnt/g    ntfs-3g  defaults 0 2
 
 # Install additional applications
 sudo pacman -S hyprland hyprlock foot fish rofi fastfetch grim mako nwg-look
