@@ -19,7 +19,7 @@ To set up the environment, execute the following commands in your terminal:
 ```bash
 # Install required packages
 sudo pacman -Syu
-sudo pacman -S base-devel ttf-firacode-nerd jq waybar cmus libmad networkmanager sddm network-manager-applet blueman bluez celluloid bluez-utils
+sudo pacman -S base-devel ttf-firacode-nerd jq waybar cmus libmad networkmanager sddm network-manager-applet blueman bluez bluez-utils celluloid loupe
 yay -S cava catppuccin-cursors-mocha catppuccin-gtk-theme catppuccin-cursors catppuccin-icons tela-circle-icon-theme
 
 # Enable and start NetworkManager service
