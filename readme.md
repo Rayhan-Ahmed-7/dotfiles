@@ -39,7 +39,7 @@ sudo pacman -S ntfs-3g
 UUID=342AFB742AFB318A /home/rayhan/mnt/g    ntfs-3g  defaults 0 2
 
 # Install additional applications
-sudo pacman -S hyprland hyprlock foot fish rofi fastfetch grim mako nwg-look
+sudo pacman -S hyprland hyprlock foot fish rofi fastfetch grim slurp libnotify mako nwg-look
 
 # Install JetBrains Mono font
 sudo pacman -S ttf-jetbrains-mono ttf-nerd-fonts-symbols papirus-icon-theme
